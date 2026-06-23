@@ -50,7 +50,8 @@ const portfolioData = {
         "Built and deployed a full-stack e-commerce application enabling product discovery, authentication, and order management through a responsive and user-centric interface.",
       technologies: ["ReactJS", "Node.js", "MongoDB", "Vercel", "Render"],
       github: "https://github.com/kathirvel962/ecommerce",
-      githubBackend: "https://github.com/kathirvel962/ecommerce-backend"
+      githubBackend: "https://github.com/kathirvel962/ecommerce-backend",
+      liveUrl: "https://ecommerce1234.vercel.app/"
     }
   ],
   achievements: [
