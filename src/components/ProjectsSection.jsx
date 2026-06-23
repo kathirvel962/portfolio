@@ -9,7 +9,8 @@ const ProjectsSection = ({ projects }) => (
         {projects.map((project) => (
           <article
             key={project.title}
-            className="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all overflow-hidden"
+            onClick={() => project.liveUrl && window.open(project.liveUrl, "_blank", "noopener,noreferrer")}
+            className={`group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all overflow-hidden ${project.liveUrl ? "cursor-pointer" : ""}`}
           >
             <div className="h-1 w-full bg-gradient-to-r from-violet-500 to-indigo-500" />
             <div className="p-6">

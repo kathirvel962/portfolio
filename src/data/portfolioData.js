@@ -40,7 +40,8 @@ const portfolioData = {
       description:
         "Developed a full-stack library management platform with role-based workflows for administrators and students, streamlining catalog operations, book issuing, and return tracking through API-first architecture.",
       technologies: ["React", "Node.js", "Express.js", "MongoDB", "MERN"],
-      github: "https://github.com/kathirvel962/librarymanagementsystem-MERN"
+      github: "https://github.com/kathirvel962/librarymanagementsystem-MERN",
+      liveUrl: "https://librarymanagementsystem-mern.vercel.app/"
     },
     {
       title: "E-commerce MERN",
