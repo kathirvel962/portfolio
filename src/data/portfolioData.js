@@ -40,7 +40,7 @@ const portfolioData = {
       description:
         "Developed a full-stack library management platform with role-based workflows for administrators and students, streamlining catalog operations, book issuing, and return tracking through API-first architecture.",
       technologies: ["React", "Node.js", "Express.js", "MongoDB", "MERN"],
-      github: null
+      github: "https://github.com/kathirvel962/librarymanagementsystem-MERN"
     },
     {
       title: "E-commerce MERN",
@@ -48,7 +48,8 @@ const portfolioData = {
       description:
         "Built and deployed a full-stack e-commerce application enabling product discovery, authentication, and order management through a responsive and user-centric interface.",
       technologies: ["ReactJS", "Node.js", "MongoDB", "Vercel", "Render"],
-      github: "Github"
+      github: "https://github.com/kathirvel962/ecommerce",
+      githubBackend: "https://github.com/kathirvel962/ecommerce-backend"
     }
   ],
   achievements: [
