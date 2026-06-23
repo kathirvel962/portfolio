@@ -22,41 +22,35 @@ const App = () => {
       { id: "projects", label: "Projects" },
       { id: "timeline", label: "Timeline" },
       { id: "resume", label: "Resume" },
-      { id: "contact", label: "Contact" }
+      { id: "contact", label: "Contact" },
     ],
     []
   );
 
-  const activeSection = useActiveSection(sections.map((section) => section.id));
+  const activeSection = useActiveSection(sections.map((s) => s.id));
 
   useEffect(() => {
-    document.body.classList.toggle("dark", isDarkMode);
+    document.documentElement.classList.toggle("dark", isDarkMode);
   }, [isDarkMode]);
 
   useEffect(() => {
-    const revealElements = document.querySelectorAll(".fade-in");
-    const revealObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("show");
-        });
-      },
+    const elements = document.querySelectorAll(".fade-in");
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("show"); }),
       { threshold: 0.15 }
     );
-
-    revealElements.forEach((element) => revealObserver.observe(element));
-    return () => revealObserver.disconnect();
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <>
+    <div className="bg-white dark:bg-slate-950 text-slate-900 dark:text-white min-h-screen transition-colors duration-300">
       <Navbar
         sections={sections}
         activeSection={activeSection}
         isDarkMode={isDarkMode}
         onToggleTheme={() => setIsDarkMode((prev) => !prev)}
       />
-
       <main>
         <HeroSection data={portfolioData} />
         <AboutSection summary={portfolioData.professionalSummary} objective={portfolioData.careerObjective} />
@@ -70,9 +64,11 @@ const App = () => {
         <ResumeSection resumeFileName={portfolioData.resumeFileName} />
         <ContactSection contact={portfolioData.contact} codingProfiles={portfolioData.codingProfiles} />
       </main>
-
+      <footer className="py-6 text-center text-sm text-slate-500 dark:text-slate-500 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
+        © {new Date().getFullYear()} Kathirvel S — Built with React & Tailwind CSS
+      </footer>
       <ScrollTopButton />
-    </>
+    </div>
   );
 };
 

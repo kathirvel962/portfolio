@@ -43,27 +43,11 @@ const portfolioData = {
       github: null
     },
     {
-      title: "FeadHealth AI",
-      period: "January 2026",
-      description:
-        "Engineered a privacy-preserving federated healthcare monitoring solution that supports distributed model training with real-time risk analysis and outbreak detection capabilities.",
-      technologies: ["React", "Django", "MongoDB"],
-      github: "Github"
-    },
-    {
       title: "E-commerce MERN",
       period: "December 2025",
       description:
         "Built and deployed a full-stack e-commerce application enabling product discovery, authentication, and order management through a responsive and user-centric interface.",
       technologies: ["ReactJS", "Node.js", "MongoDB", "Vercel", "Render"],
-      github: "Github"
-    },
-    {
-      title: "Price Comparison Snapshot",
-      period: "October 2025",
-      description:
-        "Implemented a price comparison snapshot module to aggregate and present product prices quickly, helping users identify cost-effective options for better purchase decisions.",
-      technologies: ["HTML", "CSS", "JavaScript", "Java", "MySQL", "Spring Boot", "Maven"],
       github: "Github"
     }
   ],
